@@ -1,8 +1,11 @@
 group 'gaurav'
 version '1.0-SNAPSHOT'
 
+apply from: "gradle.properties"
+
 apply plugin: 'java'
 apply plugin: 'application'
+
 
 sourceCompatibility = 1.8
 
@@ -12,6 +15,20 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '3.2.1.RELEASE'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile group: 'org.springframework.batch', name: 'spring-batch-core', version: '3.0.2.RELEASE'
+    compile group: 'org.springframework.batch', name: 'spring-batch-infrastructure', version: '3.0.2.RELEASE'
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    // https://mvnrepository.com/artifact/junit/junit
+// https://mvnrepository.com/artifact/org.springframework/spring-tx
+    compile group: 'org.springframework', name: 'spring-tx', version: '3.2.1.RELEASE'
+    // https://mvnrepository.com/artifact/org.hsqldb/hsqldb
+    testCompile group: 'org.hsqldb', name: 'hsqldb', version: '2.4.0'
+
+
 }
 
-mainClassName = 'com.home.springbatch.Main'
+//mainClassName = 'com.home.springbatch.Main'
+mainClassName='batch.ExecuteBatchJob'
