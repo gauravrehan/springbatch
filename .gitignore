@@ -1,0 +1,9 @@
+build
+install
+lib
+src/bin
+target
+bin
+.gradle
+**/.idea/workspace.xml
+**/.idea/tasks.xml
